@@ -1,0 +1,43 @@
+{
+  "n": 191,
+  "distributions_pct": {
+    "answer_correct": {
+      "Partial": 19.3717277486911,
+      "Yes": 57.06806282722513,
+      "No": 23.56020942408377
+    },
+    "evidence_support": {
+      "Partial": 30.36649214659686,
+      "Yes": 55.497382198952884,
+      "No": 14.136125654450263
+    },
+    "evidence_quality": {
+      "Good": 54.973821989528794,
+      "Weak": 38.7434554973822,
+      "Missing": 6.282722513089005
+    },
+    "question_clarity": {
+      "Good": 100.0
+    }
+  },
+  "headlines": {
+    "answer_correct_yes_or_partial_pct": 76.43979057591622,
+    "evidence_support_yes_or_partial_pct": 85.86387434554975,
+    "question_clarity_good_pct": 100.0
+  },
+  "adjudication": {
+    "n_full_agree_all_dims": 28,
+    "n_asad_attila_any_disagree": 141,
+    "asad_attila_disagree_per_dim": {
+      "answer_correct": 86,
+      "evidence_support": 66,
+      "evidence_quality": 108,
+      "question_clarity": 9
+    },
+    "all_3_different_per_dim": {
+      "evidence_quality": 16,
+      "answer_correct": 26,
+      "evidence_support": 19
+    }
+  }
+}

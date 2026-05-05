@@ -1,0 +1,36 @@
+[
+  {
+    "name": "phi3.5_mini",
+    "n": 1000,
+    "rougeL": 0.5975171055142162,
+    "bertscore_f1": 0.9303028583526611,
+    "faithfulness_score": 0.18816595945308817
+  },
+  {
+    "name": "mistral_7b_v0.3",
+    "n": 1000,
+    "rougeL": 0.5999300155819715,
+    "bertscore_f1": 0.9297776818275452,
+    "faithfulness_score": 0.18340405469118343,
+    "perplexity": 14.695759966989419,
+    "wall_time_s": 3965.9382898807526
+  },
+  {
+    "name": "qwen2.5_7b",
+    "n": 1000,
+    "rougeL": 0.5946605902803668,
+    "bertscore_f1": 0.9293700456619263,
+    "faithfulness_score": 0.19325789721829326,
+    "perplexity": 11.493353599479411,
+    "wall_time_s": 3150.547681570053
+  },
+  {
+    "name": "deepseek_r1_distill_7b",
+    "n": 1000,
+    "rougeL": 0.5037967743275074,
+    "bertscore_f1": 0.9111268520355225,
+    "faithfulness_score": 0.2155822725129656,
+    "perplexity": 23.33654779775114,
+    "wall_time_s": 4578.984543561935
+  }
+]

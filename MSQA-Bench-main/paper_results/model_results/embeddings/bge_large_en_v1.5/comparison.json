@@ -1,0 +1,57 @@
+{
+  "model_name": "bge_large_en_v1.5",
+  "base_model": "BAAI/bge-large-en-v1.5",
+  "finetuned_path": "/home/asad/models/fine_tuned_embeddings_bge_large_en_v1.5",
+  "base_results": {
+    "recall@1": 0.693,
+    "recall@5": 0.7772,
+    "recall@10": 0.8098,
+    "mrr@10": 0.7345629050204807,
+    "ndcg@10": 0.7498378256589192,
+    "map@10": 0.7345629050204807,
+    "num_queries": 5000,
+    "num_corpus": 5000
+  },
+  "finetuned_results": {
+    "recall@1": 0.8088,
+    "recall@5": 0.9058,
+    "recall@10": 0.9334,
+    "mrr@10": 0.8528057424541882,
+    "ndcg@10": 0.8702271614774049,
+    "map@10": 0.8528057424541882,
+    "num_queries": 5000,
+    "num_corpus": 5000
+  },
+  "improvements": {
+    "recall@1": {
+      "base": 0.693,
+      "finetuned": 0.8088,
+      "absolute": 0.1158,
+      "relative_pct": 16.7
+    },
+    "recall@5": {
+      "base": 0.7772,
+      "finetuned": 0.9058,
+      "absolute": 0.1286,
+      "relative_pct": 16.5
+    },
+    "recall@10": {
+      "base": 0.8098,
+      "finetuned": 0.9334,
+      "absolute": 0.1236,
+      "relative_pct": 15.3
+    },
+    "mrr@10": {
+      "base": 0.7346,
+      "finetuned": 0.8528,
+      "absolute": 0.1182,
+      "relative_pct": 16.1
+    },
+    "ndcg@10": {
+      "base": 0.7498,
+      "finetuned": 0.8702,
+      "absolute": 0.1204,
+      "relative_pct": 16.1
+    }
+  }
+}

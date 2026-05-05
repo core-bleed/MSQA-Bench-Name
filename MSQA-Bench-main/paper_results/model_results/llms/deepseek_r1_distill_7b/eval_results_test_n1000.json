@@ -1,0 +1,20 @@
+{
+  "model_name": "deepseek_r1_distill_7b",
+  "num_samples": 1000,
+  "rouge1": 0.5505700440210374,
+  "rouge2": 0.42069706365276954,
+  "rougeL": 0.5037967743275074,
+  "bertscore_precision": 0.9054569005966187,
+  "bertscore_recall": 0.9178571105003357,
+  "bertscore_f1": 0.9111268520355225,
+  "token_f1": 0.5206227296819605,
+  "token_precision": 0.501497519710553,
+  "token_recall": 0.5903931110053425,
+  "exact_match": 0.055,
+  "faithfulness_score": 0.2155822725129656,
+  "faithfulness_samples": 707,
+  "perplexity": 23.33654779775114,
+  "avg_gen_length": 174.605,
+  "avg_ref_length": 118.289,
+  "avg_tokens_per_second": 10.244861905982201
+}

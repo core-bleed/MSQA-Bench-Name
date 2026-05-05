@@ -1,0 +1,7 @@
+page,x0,y0,x1,y1,text,block_no,block_type
+1,72.0,72.00001525878906,263.9499206542969,87.114013671875,"MSQA-Bench smoke extraction sample
+",0,0
+1,72.0,104.49513244628906,539.7091674804688,152.10418701171875,"A liquid chromatography tandem mass spectrometry workflow identifies peptides from precursor
+and fragment ions. The tiny document exists only to verify that the released extraction command
+runs end to end.
+",1,0

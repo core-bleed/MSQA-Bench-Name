@@ -1,0 +1,57 @@
+{
+  "model_name": "e5_base_v2",
+  "base_model": "intfloat/e5-base-v2",
+  "finetuned_path": "/home/asad/models/fine_tuned_embeddings_e5_base_v2",
+  "base_results": {
+    "recall@1": 0.7476,
+    "recall@5": 0.8138,
+    "recall@10": 0.8294,
+    "mrr@10": 0.778978112621441,
+    "ndcg@10": 0.7893638296245572,
+    "map@10": 0.778978112621441,
+    "num_queries": 5000,
+    "num_corpus": 5000
+  },
+  "finetuned_results": {
+    "recall@1": 0.8464,
+    "recall@5": 0.9276,
+    "recall@10": 0.9512,
+    "mrr@10": 0.882582186173212,
+    "ndcg@10": 0.897632626016805,
+    "map@10": 0.882582186173212,
+    "num_queries": 5000,
+    "num_corpus": 5000
+  },
+  "improvements": {
+    "recall@1": {
+      "base": 0.7476,
+      "finetuned": 0.8464,
+      "absolute": 0.0988,
+      "relative_pct": 13.2
+    },
+    "recall@5": {
+      "base": 0.8138,
+      "finetuned": 0.9276,
+      "absolute": 0.1138,
+      "relative_pct": 14.0
+    },
+    "recall@10": {
+      "base": 0.8294,
+      "finetuned": 0.9512,
+      "absolute": 0.1218,
+      "relative_pct": 14.7
+    },
+    "mrr@10": {
+      "base": 0.779,
+      "finetuned": 0.8826,
+      "absolute": 0.1036,
+      "relative_pct": 13.3
+    },
+    "ndcg@10": {
+      "base": 0.7894,
+      "finetuned": 0.8976,
+      "absolute": 0.1083,
+      "relative_pct": 13.7
+    }
+  }
+}

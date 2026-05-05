@@ -1,0 +1,44 @@
+{
+  "ollama": {
+    "url": "http://localhost:11434",
+    "model": "llama3.2-vision:latest",
+    "timeout": 500,
+    "temperature": 0.1,
+    "top_p": 0.9
+  },
+  "processing": {
+    "image_dpi": 200,
+    "output_dir": "extracted_text/vision",
+    "input_dir": "data/input",
+    "log_level": "INFO",
+    "batch_size": 1,
+    "progress_file": "logs/extraction_progress.json"
+  },
+  "logging": {
+    "log_file": "logs/pdf_extraction.log"
+  },
+  "models": {
+    "recommended": [
+      "llava:13b",
+      "llava:7b", 
+      "bakllava",
+      "llava-phi3",
+      "moondream"
+    ],
+    "fallback": "llava:7b"
+  },
+  "text_cleaning": {
+    "apply_unidecode": true,
+    "remove_extra_whitespace": true,
+    "min_text_length": 10
+  },
+  "agentic": {
+    "max_retries": 3,
+    "quality_threshold": 0.6,
+    "min_text_length": 50,
+    "max_repetition_ratio": 0.3,
+    "enable_reflection": true,
+    "strategies": ["standard", "detailed", "ocr-focused"]
+  }
+}
+

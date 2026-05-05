@@ -1,0 +1,6 @@
+Page: 1, Block: 0, Text: MSQA-Bench smoke extraction sample
+
+Page: 1, Block: 1, Text: A liquid chromatography tandem mass spectrometry workflow identifies peptides from precursor
+and fragment ions. The tiny document exists only to verify that the released extraction command
+runs end to end.
+

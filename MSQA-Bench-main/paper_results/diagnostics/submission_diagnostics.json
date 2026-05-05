@@ -1,0 +1,131 @@
+{
+  "leakage": {
+    "answer_5gram_overlap": {
+      "mean": 0.1125148259475069,
+      "median": 0.034482758620689655,
+      "n": 59326,
+      "p90": 0.32466216216216215,
+      "p95": 0.5,
+      "share_eq_1_0_pct": 2.0581195428648487,
+      "share_ge_0_8_pct": 2.4930047533964874
+    },
+    "doc_overlap": {
+      "train_test": 0,
+      "train_val": 0,
+      "val_test": 0
+    },
+    "exact_test_answer_in_train": 1407,
+    "exact_test_answer_in_train_pct": 2.2689888727624576,
+    "exact_test_answer_len5_in_train": 732,
+    "exact_test_answer_len5_in_train_pct": 1.2338603647641844,
+    "exact_test_question_in_train": 134,
+    "exact_test_question_in_train_pct": 0.2156455688054201,
+    "split_counts": {
+      "test": 62139,
+      "train": 1011466,
+      "val": 118137
+    },
+    "test_answer_len5_total": 59326,
+    "test_answer_total": 62010,
+    "unique_docs": {
+      "test": 1599,
+      "train": 27563,
+      "val": 3214
+    }
+  },
+  "license_summary": {
+    "records_by_license_and_status": [
+      {
+        "documents": 15357,
+        "license": "open_access",
+        "records": 504181,
+        "redistribution_status": "text_released"
+      },
+      {
+        "documents": 17021,
+        "license": "unknown",
+        "records": 687561,
+        "redistribution_status": "metadata_only"
+      }
+    ],
+    "split_counts": {
+      "test|open_access|text_released": 26364,
+      "test|unknown|metadata_only": 35775,
+      "train|open_access|text_released": 428611,
+      "train|unknown|metadata_only": 582855,
+      "val|open_access|text_released": 49206,
+      "val|unknown|metadata_only": 68931
+    }
+  },
+  "quality_calibration": {
+    "buckets": [
+      {
+        "answer_full_pct": 33.333333333333336,
+        "answer_yes_or_partial_pct": 33.333333333333336,
+        "bucket": "<0.60",
+        "evidence_yes_or_partial_pct": 33.333333333333336,
+        "mean_quality_score": 0.57,
+        "n": 3
+      },
+      {
+        "answer_full_pct": 63.1578947368421,
+        "answer_yes_or_partial_pct": 73.6842105263158,
+        "bucket": "0.60-0.69",
+        "evidence_yes_or_partial_pct": 78.94736842105263,
+        "mean_quality_score": 0.6573684210526316,
+        "n": 19
+      },
+      {
+        "answer_full_pct": 58.333333333333336,
+        "answer_yes_or_partial_pct": 78.33333333333333,
+        "bucket": "0.70-0.79",
+        "evidence_yes_or_partial_pct": 89.16666666666667,
+        "mean_quality_score": 0.7152499999999999,
+        "n": 120
+      },
+      {
+        "answer_full_pct": 53.06122448979592,
+        "answer_yes_or_partial_pct": 75.51020408163265,
+        "bucket": ">=0.80",
+        "evidence_yes_or_partial_pct": 83.6734693877551,
+        "mean_quality_score": 0.8691836734693877,
+        "n": 49
+      }
+    ],
+    "n": 191,
+    "score_max": 0.92,
+    "score_min": 0.56,
+    "spearman": {
+      "answer_full": -0.03044285514621348,
+      "answer_yes_or_partial": 0.07067293564136783,
+      "evidence_yes_or_partial": 0.031152247140420617
+    }
+  },
+  "question_type_validation_template": {
+    "path": "/Users/asad/Projects/MS-GPT/paper_results/annotation/question_type_validation_template.csv",
+    "rows": 200,
+    "written": true
+  },
+  "zero_shot_generation": [
+    {
+      "avg_pred_length": 284.538,
+      "exact_match": 0.036,
+      "model_name": "gpt-4o-2024-11-20",
+      "note": "BERTScore and NLI-faithfulness deferred \u2014 predictions JSONL is the input for a follow-up torch-based scoring pass on the GPU box.",
+      "num_samples": 1000,
+      "rouge1": 0.5447309587471254,
+      "rougeL": 0.48772351310662776,
+      "token_f1": 0.5322324605353624
+    },
+    {
+      "avg_pred_length": 293.01,
+      "exact_match": 0.042,
+      "model_name": "gpt-4o-mini-2024-07-18",
+      "note": "BERTScore and NLI-faithfulness deferred \u2014 predictions JSONL is the input for a follow-up torch-based scoring pass on the GPU box.",
+      "num_samples": 1000,
+      "rouge1": 0.5383557961393527,
+      "rougeL": 0.4836698070601529,
+      "token_f1": 0.5264183703943388
+    }
+  ]
+}

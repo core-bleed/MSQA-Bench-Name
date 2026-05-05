@@ -1,0 +1,57 @@
+{
+  "extractor": {
+    "output_dir": "extracted_text/bulk_40k",
+    "log_file": "logs/bulk_extraction_40k.log",
+    "progress_file": "logs/progress_40k.json",
+    "min_text_length": 10,
+    "ocr_threshold": 0.1,
+    "max_workers": 16,
+    "use_ocr_fallback": true,
+    "clean_text": true,
+    "save_as_markdown": false
+  },
+  "batch_processing": {
+    "input_dir": "data/input",
+    "pattern": "*.pdf",
+    "force_reprocess": false,
+    "parallel": false,
+    "checkpoint_interval": 100,
+    "retry_failed": true,
+    "max_retries": 2
+  },
+  "ocr_settings": {
+    "enable": true,
+    "language": "eng",
+    "dpi": 200,
+    "timeout_per_page": 30,
+    "tesseract_config": "--oem 3 --psm 6"
+  },
+  "performance": {
+    "max_workers": 16,
+    "worker_timeout": 300,
+    "memory_limit_mb": 8192,
+    "batch_size": 50,
+    "save_progress_every": 25
+  },
+  "logging": {
+    "level": "INFO",
+    "log_file": "logs/bulk_extraction_40k.log",
+    "rotate_size_mb": 100,
+    "backup_count": 5,
+    "show_progress": true,
+    "progress_update_interval": 10
+  },
+  "error_handling": {
+    "skip_corrupted": true,
+    "skip_encrypted": true,
+    "skip_empty": true,
+    "max_consecutive_failures": 50,
+    "save_failed_list": "logs/failed_pdfs_40k.json"
+  },
+  "resource_management": {
+    "nice_level": 10,
+    "io_nice_class": 2,
+    "io_nice_level": 4,
+    "cpu_affinity": null
+  }
+}

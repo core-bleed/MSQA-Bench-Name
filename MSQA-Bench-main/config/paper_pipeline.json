@@ -1,0 +1,75 @@
+{
+  "_comment": "MSQA-Bench paper pipeline: processes existing Q&A in consolidated_qa.jsonl (no LLM regeneration).",
+  
+  "input": {
+    "qa_file": "data/consolidated_qa.jsonl",
+    "text_dir": "data/extracted_text/bulk_40k",
+    "text_dir_fallbacks": [
+      "data/extracted_text/bulk_40k",
+      "data/extracted_text",
+      "data/processed_pdfs"
+    ]
+  },
+  
+  "output": {
+    "base_dir": "paper_results",
+    "dataset_dir": "paper_results/dataset",
+    "evaluation_dir": "paper_results/evaluation",
+    "figures_dir": "paper_results/figures",
+    "annotation_dir": "paper_results/annotation",
+    "log_file": "paper_results/pipeline.log"
+  },
+  
+  "parallel": {
+    "_comment": "dataset_workers > 1 enables ProcessPoolExecutor chunk processing (CPU). Use 8–16 on server for ~1M+ lines. MinHash dedup stays single-threaded after parallel metric passes.",
+    "dataset_workers": 8,
+    "quality_chunk_size": 8000,
+    "classifier_chunk_size": 8000,
+    "enricher_chunk_size": 4000
+  },
+
+  "dataset": {
+    "quality_filters": {
+      "min_quality": 0.4,
+      "deduplicate": true
+    },
+    "split": {
+      "train_ratio": 0.85,
+      "val_ratio": 0.10,
+      "test_ratio": 0.05
+    },
+    "metadata": {
+      "use_api": false,
+      "extract_from_context": true
+    }
+  },
+  
+  "evaluation": {
+    "retrieval": {
+      "enabled": true,
+      "models": [
+        "bm25",
+        "intfloat/e5-base-v2",
+        "intfloat/e5-large-v2",
+        "BAAI/bge-base-en-v1.5",
+        "BAAI/bge-large-en-v1.5",
+        "nomic-ai/nomic-embed-text-v1.5"
+      ],
+      "sample_size": 5000,
+      "compare_baselines": true,
+      "device": "auto",
+      "embed_batch_size": 128
+    }
+  },
+  
+  "annotation": {
+    "enabled": true,
+    "sample_size": 200,
+    "format": "csv"
+  },
+  
+  "fallbacks": {
+    "text_dir_from_qa_file_names": true,
+    "continue_on_step_error": false
+  }
+}

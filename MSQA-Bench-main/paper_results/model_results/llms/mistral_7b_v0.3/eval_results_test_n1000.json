@@ -1,0 +1,20 @@
+{
+  "model_name": "mistral_7b_v0.3",
+  "num_samples": 1000,
+  "rouge1": 0.6389063520214828,
+  "rouge2": 0.5208172219742184,
+  "rougeL": 0.5999300155819715,
+  "bertscore_precision": 0.9313658475875854,
+  "bertscore_recall": 0.9288904070854187,
+  "bertscore_f1": 0.9297776818275452,
+  "token_f1": 0.5950340738223511,
+  "token_precision": 0.6168339722036551,
+  "token_recall": 0.6083113326068167,
+  "exact_match": 0.143,
+  "faithfulness_score": 0.18340405469118343,
+  "faithfulness_samples": 707,
+  "perplexity": 14.695759966989419,
+  "avg_gen_length": 120.16,
+  "avg_ref_length": 118.289,
+  "avg_tokens_per_second": 9.234099059277984
+}

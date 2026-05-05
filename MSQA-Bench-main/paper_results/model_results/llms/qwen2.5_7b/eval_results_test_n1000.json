@@ -1,0 +1,20 @@
+{
+  "model_name": "qwen2.5_7b",
+  "num_samples": 1000,
+  "rouge1": 0.6327630673813528,
+  "rouge2": 0.5108250390776982,
+  "rougeL": 0.5946605902803668,
+  "bertscore_precision": 0.930382490158081,
+  "bertscore_recall": 0.9290108680725098,
+  "bertscore_f1": 0.9293700456619263,
+  "token_f1": 0.5822836395823374,
+  "token_precision": 0.5973126642496667,
+  "token_recall": 0.6006443991917112,
+  "exact_match": 0.144,
+  "faithfulness_score": 0.19325789721829326,
+  "faithfulness_samples": 707,
+  "perplexity": 11.493353599479411,
+  "avg_gen_length": 120.314,
+  "avg_ref_length": 118.289,
+  "avg_tokens_per_second": 10.236797885972283
+}

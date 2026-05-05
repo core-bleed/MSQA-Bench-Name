@@ -1,0 +1,11 @@
+{
+  "model": "BM25 (Okapi)",
+  "recall@1": 0.625,
+  "recall@5": 1.0,
+  "recall@10": 1.0,
+  "mrr@10": 0.8125,
+  "ndcg@10": 0.8615986575892967,
+  "map@10": 0.8125,
+  "num_queries": 8,
+  "num_corpus": 8
+}

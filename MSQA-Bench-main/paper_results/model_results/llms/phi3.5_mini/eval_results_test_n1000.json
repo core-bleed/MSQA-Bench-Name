@@ -1,0 +1,20 @@
+{
+  "model_name": "phi3.5_mini",
+  "num_samples": 1000,
+  "rouge1": 0.6376086808870921,
+  "rouge2": 0.5201490599579479,
+  "rougeL": 0.5975171055142162,
+  "bertscore_precision": 0.9322404265403748,
+  "bertscore_recall": 0.9291286468505859,
+  "bertscore_f1": 0.9303028583526611,
+  "token_f1": 0.5939475964546287,
+  "token_precision": 0.6175956022208595,
+  "token_recall": 0.6057429309384654,
+  "exact_match": 0.153,
+  "faithfulness_score": 0.18816595945308817,
+  "faithfulness_samples": 707,
+  "perplexity": 8.732641256133325,
+  "avg_gen_length": 118.123,
+  "avg_ref_length": 118.289,
+  "avg_tokens_per_second": 8.126493365363274
+}

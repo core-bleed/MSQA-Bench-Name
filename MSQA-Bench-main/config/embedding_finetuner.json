@@ -1,0 +1,121 @@
+{
+  "_comment": "Streaming Embedding Fine-Tuner Configuration",
+  
+  "input_jsonl": "data/consolidated_qa.jsonl",
+  "output_dir": "models/fine_tuned_embeddings",
+  "checkpoint_dir": "models/fine_tuned_embeddings/checkpoints",
+  "log_file": "logs/streaming_finetuning.log",
+  
+  "base_model": "nomic-ai/nomic-embed-text-v1.5",
+  "max_seq_length": 8192,
+  
+  "streaming": true,
+  "num_epochs": 1,
+  "train_batch_size": 64,
+  "eval_batch_size": 32,
+  "learning_rate": 2e-5,
+  "warmup_ratio": 0.05,
+  "gradient_accumulation_steps": 4,
+  
+  "train_ratio": 0.85,
+  "val_ratio": 0.10,
+  "test_ratio": 0.05,
+  
+  "min_question_length": 10,
+  "max_question_length": 256,
+  "min_answer_length": 20,
+  "max_answer_length": 512,
+  "clean_answers": true,
+  
+  "eval_sample_size": 5000,
+  "checkpoint_save_limit": 3,
+  
+  "loss_function": "MultipleNegativesRankingLoss",
+  
+  "subset_size": null,
+  
+  "_model_options": {
+    "lightweight": "sentence-transformers/all-MiniLM-L6-v2",
+    "high_quality": "sentence-transformers/all-mpnet-base-v2",
+    "qa_optimized": "sentence-transformers/multi-qa-MiniLM-L6-cos-v1",
+    "multilingual": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "nomic_v1": "nomic-ai/nomic-embed-text-v1",
+    "nomic_v1.5": "nomic-ai/nomic-embed-text-v1.5"
+  },
+  
+  "models_to_train": [
+    {
+      "name": "e5_large_v2",
+      "model_path": "intfloat/e5-large-v2",
+      "max_seq_length": 512,
+      "train_batch_size": 8,
+      "eval_batch_size": 8,
+      "gradient_accumulation_steps": 32,
+      "requires_instruction_prefix": true,
+      "query_prefix": "query:",
+      "document_prefix": "passage:",
+      "trust_remote_code": false,
+      "enabled": true
+    },
+    {
+      "name": "bge_large_en_v1.5",
+      "model_path": "BAAI/bge-large-en-v1.5",
+      "max_seq_length": 512,
+      "train_batch_size": 8,
+      "eval_batch_size": 8,
+      "gradient_accumulation_steps": 32,
+      "requires_instruction_prefix": false,
+      "query_prefix": null,
+      "document_prefix": null,
+      "trust_remote_code": false,
+      "enabled": true
+    },
+    {
+      "name": "nomic_embed_v1.5",
+      "model_path": "nomic-ai/nomic-embed-text-v1.5",
+      "max_seq_length": 8192,
+      "train_batch_size": 16,
+      "eval_batch_size": 8,
+      "gradient_accumulation_steps": 16,
+      "requires_instruction_prefix": true,
+      "query_prefix": "search_query:",
+      "document_prefix": "search_document:",
+      "trust_remote_code": true,
+      "enabled": true
+    },
+    {
+      "name": "e5_base_v2",
+      "model_path": "intfloat/e5-base-v2",
+      "max_seq_length": 512,
+      "requires_instruction_prefix": true,
+      "query_prefix": "query:",
+      "document_prefix": "passage:",
+      "trust_remote_code": false,
+      "enabled": true
+    },
+    {
+      "name": "bge_base_en_v1.5",
+      "model_path": "BAAI/bge-base-en-v1.5",
+      "max_seq_length": 512,
+      "requires_instruction_prefix": false,
+      "query_prefix": null,
+      "document_prefix": null,
+      "trust_remote_code": false,
+      "enabled": true
+    }
+  ],
+  
+  "_training_tips": [
+    "For 1M+ pairs: use num_epochs=1, larger batch size",
+    "Start with subset_size=200000 to validate pipeline",
+    "Increase gradient_accumulation_steps if GPU memory limited",
+    "Use warmup_ratio=0.05 to 0.10 for stable training"
+  ],
+  
+  "_data_split_info": {
+    "train": "85% of data (hash % 100 < 85)",
+    "val": "10% of data (85 <= hash % 100 < 95)", 
+    "test": "5% of data (hash % 100 >= 95)",
+    "note": "Splits are deterministic based on record ID hash"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "model_name": "nomic_embed_v1.5",
+  "base_model": "nomic-ai/nomic-embed-text-v1.5",
+  "finetuned_path": "/home/asad/models/fine_tuned_embeddings_nomic_embed_v1.5",
+  "base_results": {
+    "recall@1": 0.7274,
+    "recall@5": 0.7958,
+    "recall@10": 0.8158,
+    "mrr@10": 0.7608247265262893,
+    "ndcg@10": 0.7722895153831302,
+    "map@10": 0.7608247265262893,
+    "num_queries": 5000,
+    "num_corpus": 5000
+  },
+  "finetuned_results": {
+    "recall@1": 0.8248,
+    "recall@5": 0.9144,
+    "recall@10": 0.9428,
+    "mrr@10": 0.8661127914880145,
+    "ndcg@10": 0.8829122380350586,
+    "map@10": 0.8661127914880145,
+    "num_queries": 5000,
+    "num_corpus": 5000
+  },
+  "improvements": {
+    "recall@1": {
+      "base": 0.7274,
+      "finetuned": 0.8248,
+      "absolute": 0.0974,
+      "relative_pct": 13.4
+    },
+    "recall@5": {
+      "base": 0.7958,
+      "finetuned": 0.9144,
+      "absolute": 0.1186,
+      "relative_pct": 14.9
+    },
+    "recall@10": {
+      "base": 0.8158,
+      "finetuned": 0.9428,
+      "absolute": 0.127,
+      "relative_pct": 15.6
+    },
+    "mrr@10": {
+      "base": 0.7608,
+      "finetuned": 0.8661,
+      "absolute": 0.1053,
+      "relative_pct": 13.8
+    },
+    "ndcg@10": {
+      "base": 0.7723,
+      "finetuned": 0.8829,
+      "absolute": 0.1106,
+      "relative_pct": 14.3
+    }
+  }
+}

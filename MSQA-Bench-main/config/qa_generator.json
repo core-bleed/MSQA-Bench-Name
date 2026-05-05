@@ -1,0 +1,22 @@
+{
+  "input_dir": "extracted_text/bulk_40k",
+  "output_dir": "data/qa_outputs",
+  "pdf_source_dir": "data/input",
+  "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+  "base_url": "http://localhost:8000/v1",
+  "api_key": "not-needed",
+  "max_retries": 5,
+  "base_delay": 1.0,
+  "max_delay": 60.0,
+  "timeout": 300,
+  "workers": 8,
+  "temperature": 0.3,
+  "max_tokens": 1024,
+  "min_paragraph_length": 50,
+  "max_paragraph_length": 4000,
+  "circuit_breaker_threshold": 0.4,
+  "circuit_breaker_min_attempts": 10,
+  "checkpoint_interval": 25,
+  "memory_threshold_pct": 85,
+  "log_gpu_interval": 50
+}

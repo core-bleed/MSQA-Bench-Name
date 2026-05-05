@@ -1,0 +1,24 @@
+{
+  "train": {
+    "documents": 27563,
+    "qa_pairs": 1011466,
+    "doc_percent": 85.13404991351618,
+    "pair_percent": 84.8729003425238
+  },
+  "val": {
+    "documents": 3214,
+    "qa_pairs": 118137,
+    "doc_percent": 9.927106498640969,
+    "pair_percent": 9.912967739661772
+  },
+  "test": {
+    "documents": 1599,
+    "qa_pairs": 62139,
+    "doc_percent": 4.938843587842847,
+    "pair_percent": 5.214131917814426
+  },
+  "total": {
+    "documents": 32376,
+    "qa_pairs": 1191742
+  }
+}

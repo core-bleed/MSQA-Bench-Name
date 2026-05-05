@@ -1,0 +1,16 @@
+{
+  "model_name": "gpt-4o-2024-11-20",
+  "config": "zero_shot",
+  "num_samples": 1000,
+  "rouge1": 0.5447309587471254,
+  "rouge2": 0.41367392226063443,
+  "rougeL": 0.48772351310662776,
+  "token_precision": 0.4417007878531474,
+  "token_recall": 0.7959665551847472,
+  "token_f1": 0.5322324605353624,
+  "exact_match": 0.036,
+  "avg_pred_length": 284.538,
+  "avg_ref_length": 115.193,
+  "predictions_jsonl": "paper_results/model_results/llms/gpt4o_zeroshot/predictions_test_n1000.jsonl",
+  "note": "BERTScore and NLI-faithfulness deferred \u2014 predictions JSONL is the input for a follow-up torch-based scoring pass on the GPU box."
+}

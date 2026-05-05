@@ -1,0 +1,192 @@
+{
+  "annotators": [
+    "asad",
+    "gpt-4o"
+  ],
+  "n_common": 191,
+  "pair_order": [
+    [
+      "asad",
+      "gpt-4o"
+    ]
+  ],
+  "pairwise_cohen_kappa": {
+    "answer_correct": {
+      "asad__gpt-4o": {
+        "kappa": 0.18100444873237925,
+        "ci95_lo": 0.09315651604453185,
+        "ci95_hi": 0.2801130712453543,
+        "n": 191
+      }
+    },
+    "evidence_support": {
+      "asad__gpt-4o": {
+        "kappa": 0.33526682134570773,
+        "ci95_lo": 0.24871406959152806,
+        "ci95_hi": 0.41903007454374086,
+        "n": 191
+      }
+    },
+    "evidence_quality": {
+      "asad__gpt-4o": {
+        "kappa": 0.014369641155922498,
+        "ci95_lo": -0.0307211964691824,
+        "ci95_hi": 0.05969230769230768,
+        "n": 191
+      }
+    },
+    "question_clarity": {
+      "asad__gpt-4o": {
+        "kappa": 0.0,
+        "ci95_lo": 0.0,
+        "ci95_hi": 0.0,
+        "n": 191
+      }
+    }
+  },
+  "fleiss_kappa": {},
+  "raw_agreement_pct": {
+    "answer_correct": {
+      "n_agree": 111,
+      "n_total": 191,
+      "pct": 58.1151832460733
+    },
+    "evidence_support": {
+      "n_agree": 113,
+      "n_total": 191,
+      "pct": 59.16230366492147
+    },
+    "evidence_quality": {
+      "n_agree": 61,
+      "n_total": 191,
+      "pct": 31.93717277486911
+    },
+    "question_clarity": {
+      "n_agree": 184,
+      "n_total": 191,
+      "pct": 96.33507853403141
+    }
+  },
+  "label_distributions": {
+    "answer_correct": {
+      "asad": {
+        "Yes": 119,
+        "Partial": 56,
+        "No": 16
+      },
+      "gpt-4o": {
+        "Partial": 19,
+        "Yes": 136,
+        "No": 36
+      }
+    },
+    "evidence_support": {
+      "asad": {
+        "Yes": 123,
+        "Partial": 55,
+        "No": 13
+      },
+      "gpt-4o": {
+        "Partial": 48,
+        "Yes": 87,
+        "No": 56
+      }
+    },
+    "evidence_quality": {
+      "asad": {
+        "Good": 168,
+        "Weak": 22,
+        "Missing": 1
+      },
+      "gpt-4o": {
+        "Good": 53,
+        "Weak": 107,
+        "Missing": 31
+      }
+    },
+    "question_clarity": {
+      "asad": {
+        "Good": 184,
+        "Ambiguous": 6,
+        "Bad": 1
+      },
+      "gpt-4o": {
+        "Good": 191
+      }
+    }
+  },
+  "confusion_matrices": {
+    "answer_correct": {
+      "asad__gpt-4o": {
+        "Yes": {
+          "Partial": 8,
+          "Yes": 98,
+          "No": 13
+        },
+        "Partial": {
+          "No": 19,
+          "Yes": 28,
+          "Partial": 9
+        },
+        "No": {
+          "No": 4,
+          "Yes": 10,
+          "Partial": 2
+        }
+      }
+    },
+    "evidence_support": {
+      "asad__gpt-4o": {
+        "Yes": {
+          "Partial": 18,
+          "Yes": 81,
+          "No": 24
+        },
+        "Partial": {
+          "No": 25,
+          "Partial": 25,
+          "Yes": 5
+        },
+        "No": {
+          "No": 7,
+          "Partial": 5,
+          "Yes": 1
+        }
+      }
+    },
+    "evidence_quality": {
+      "asad__gpt-4o": {
+        "Good": {
+          "Good": 51,
+          "Weak": 96,
+          "Missing": 21
+        },
+        "Weak": {
+          "Weak": 10,
+          "Missing": 10,
+          "Good": 2
+        },
+        "Missing": {
+          "Weak": 1
+        }
+      }
+    },
+    "question_clarity": {
+      "asad__gpt-4o": {
+        "Good": {
+          "Good": 184
+        },
+        "Ambiguous": {
+          "Good": 6
+        },
+        "Bad": {
+          "Good": 1
+        }
+      }
+    }
+  },
+  "summary": {
+    "mean_pairwise_cohen": 0.13266022780850237,
+    "disagreements_written": 148
+  }
+}
